@@ -1,0 +1,79 @@
+// Root ///////////////////////////////////////////////////////////
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  font-family: @fontfamily;
+  font-size: unit((@fontsize / 16), em);
+  line-height: (@lineheight / @fontsize);
+
+  color: @textcolor;
+  background: @rootcolor;
+  -webkit-tap-highlight-color: @highlightcolor;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  // min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+a {
+  cursor: pointer;
+  transition: color 0.1s, opacity 0.1s;
+
+  &,
+  &:visited {
+    color: @linkcolor;
+  }
+
+  &:focus,
+  &:hover {
+    color: darken(@linkcolor, 15);
+  }
+}
+
+// Helpers --------------------------------------------------------
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+[disabled] {
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+  opacity: (2/3);
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+[hidden] {
+  display: none;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

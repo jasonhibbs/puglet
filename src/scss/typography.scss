@@ -1,0 +1,8 @@
+// Typography /////////////////////////////////////////////////////
+
+$fontfamily : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$fontsize   : 16;
+$lineheight : 27;
+
+$line       : 1em * ($lineheight / $fontsize);
+$measure    : 40em;

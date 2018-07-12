@@ -1,0 +1,78 @@
+// Controls ///////////////////////////////////////////////////////
+
+@controlscolor: @greylight;
+@controlslineheight: (22/16);
+@controlspadding_x: (10em/16);
+@controlspadding_y: (4em/16);
+
+::placeholder {
+  color: fadeout(contrast(@controlscolor), 66);
+}
+
+input,
+textarea,
+select,
+button {
+  background: @controlscolor;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  line-height: @controlslineheight;
+  padding: @controlspadding_y @controlspadding_x;
+  transition: background-color 0.1s, border-color 0.1s, box-shadow 0.1s;
+
+  &,
+  &:focus,
+  &:hover {
+    color: contrast(@controlscolor);
+  }
+}
+
+input,
+textarea,
+select {
+  &:hover {
+    box-shadow: 0 0 0 1px @keycolor;
+  }
+}
+
+input,
+select,
+button {
+  letter-spacing: unit((20/1000), em);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  position: relative;
+  top: -1px;
+  margin-right: 0.5em;
+}
+
+textarea {
+  min-height: (@controlslineheight * 2em);
+}
+
+select {
+  appearance: none;
+  background-image: @icon_arrow-down-dark;
+  background-position: right @controlspadding_x center;
+  background-repeat: no-repeat;
+  background-size: (@controlspadding_x * 1.1) auto;
+  padding-right: (@controlspadding_x * 3.2);
+
+  &[multiple] {
+    height: auto;
+    padding-right: @controlspadding_x;
+    background-image: none;
+  }
+}
+
+button {
+  &:focus,
+  &:hover {
+    background: darken(@controlscolor, 10);
+  }
+}
+
+@icon_arrow-down-dark: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9ImFycm93LWRvd24tYmxhY2siIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDY0IDQwIj48ZyBvcGFjaXR5PSIwLjM1Ij48cGF0aCBkPSJNNjMuMzYsOC40N0wzMy40NywzOC4zNmEyLDIsMCwwLDEtMi45NSwwTDAuNjQsOC40N0EyLjIxLDIuMjEsMCwwLDEsMCw3LDIuMjEsMi4yMSwwLDAsMSwuNjQsNS41M0wzLjg1LDIuMzJhMi4wOSwyLjA5LDAsMCwxLDEuNDctLjY0LDIuMjEsMi4yMSwwLDAsMSwxLjQ3LjY0TDMyLDI3LjUyLDU3LjIsMi4zMmEyLDIsMCwwLDEsMi45NSwwbDMuMjEsMy4yMUEyLjIxLDIuMjEsMCwwLDEsNjQsNywyLjIxLDIuMjEsMCwwLDEsNjMuMzYsOC40N1oiIGZpbGw9IiMwMDAiLz48L2c+PC9zdmc+Cg==);

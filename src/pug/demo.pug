@@ -1,0 +1,139 @@
+section
+  h2 Typography
+
+  ol
+    li
+      h1 First Heading
+    li
+      h2 Second Heading
+    li
+      h3 Third Heading
+    li
+      h4 Fourth Heading
+    li
+      h5 Fifth Heading
+    li
+      h6 Sixth Heading
+
+  p Lorem ipsum dolor <a>sit amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+section
+  h2 Tables
+
+  table
+    thead
+      tr
+        th Year
+        th Title
+    tbody
+      tr
+        td 1996
+        td Tomb Raider
+      tr
+        td 1997
+        td Tomb Raider &#8545;
+      tr
+        td 1998
+        td Tomb Raider &#8546;
+      tr
+        td 1999
+        td Tomb Raider: The Last Revelation
+      tr
+        td 2000
+        td Tomb Raider: Chronicles
+
+section
+  h2 Controls
+
+  form
+    p
+      label
+        | Text
+        br
+        input(placeholder="Type Something…")
+
+    p
+      label
+        | Disabled
+        br
+        input(disabled, placeholder="Nope")
+
+    p
+      label
+        | Textarea
+        br
+        textarea(placeholder="Lorem ipsum dolor sit amet…")
+
+    p
+      label
+        | Select
+        br
+        select
+          option This
+          option That
+          optgroup(label="Something")
+            option Here
+            option There
+          optgroup(label="Other")
+            option Now
+            option Then
+
+    p
+      label
+        input(type="checkbox")
+        | Checkbox
+
+
+    p
+      fieldset
+        legend Radio
+        label
+          input(type="radio" name="radio" value="1")
+          | This 
+        label
+          input(type="radio" name="radio" value="2")
+          | That 
+        label
+          input(type="radio" name="radio" value="3")
+          | Other 
+
+    p
+      label
+        | Number
+        br
+        input(type="number", placeholder="0")
+
+    p
+      label
+        | Select Multiple
+        br
+        select(multiple)
+          option This
+          option That
+          optgroup(label="Something")
+            option Here
+            option There
+          optgroup(label="Other")
+            option Now
+            option Then
+
+    p
+      button(type="button") Nothing
+      button(type="submit" class="_primary") Submit
+      button(type="button" class="_good") Done
+      button(type="reset" class="_bad") Reset
+
+    p
+      label
+        | Progress
+        br
+        progress(max="100" value="66.66") 66.66%
+        br
+        progress(max="100") Indeterminate
+
+    p
+      label
+        | Meter
+        br
+        meter(value="0.6" low="0.3" optimum="0.5" high="0.8") 0.6
+        meter(value="0.3" low="0.4" optimum="0.8" high="0.5") 0.3
